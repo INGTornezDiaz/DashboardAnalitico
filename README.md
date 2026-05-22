@@ -1,4 +1,4 @@
-# 📊 Dashboard Analytics
+# 📊 Dashboard Analitico
 
 Panel de análisis interactivo con gráficas en tiempo real, filtros dinámicos y exportación de datos.
 
@@ -10,7 +10,6 @@ Panel de análisis interactivo con gráficas en tiempo real, filtros dinámicos 
 - 📥 **Exportación** de datos en CSV y JSON
 - 📊 **KPIs** — ingresos, usuarios activos, conversión y ticket promedio
 - 🗂️ **Tabla Top Productos** con ordenamiento por ingresos, ventas o crecimiento
-- 🌙 Diseño oscuro moderno
 
 ## Tecnologías
 
@@ -19,18 +18,6 @@ Panel de análisis interactivo con gráficas en tiempo real, filtros dinámicos 
 - Tailwind CSS 3
 - Chart.js 4 + react-chartjs-2
 
-## Instalación
-
-```bash
-npm install
-npm run dev
-```
-
-## Build para producción
-
-```bash
-npm run build
-```
 
 ## Estructura
 
@@ -53,39 +40,4 @@ src/
 └── main.jsx
 ```
 
-## Despliegue
-
-Opciones recomendadas para poner esto en producción:
-
-- Vercel / Netlify: conecte el repositorio y use `npm run build` (no requiere configuración adicional para proyectos Vite).
-- Docker: construir la imagen y ejecutar con nginx:
-
-```bash
-docker build -t dashboard-analytics:latest .
-docker run -p 8080:80 dashboard-analytics:latest
-```
-
-- Servir desde el build local con `vite preview`:
-
-```bash
-npm run preview
-```
-
-## Backend local / API mock
-
-Este proyecto también incluye un backend ligero en `server/index.js` que expone datos simulados como API:
-
-```bash
-npm run serve:api
-```
-
-La aplicación usa `VITE_API_URL` para conectar con el backend. Si no se configura, seguirá funcionando con datos de fallback local.
-
-Para desarrollo local, copia `.env.example` a `.env`:
-
-```bash
-cp .env.example .env
-```
-
-Si quieres, puedo añadir un pipeline de CI/CD (GitHub Actions) para construir y desplegar automáticamente.
 
